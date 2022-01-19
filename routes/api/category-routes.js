@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
   // find all categories
   // be sure to include its associated Products
   // Access our User model and run .findAll() method)
-  Category.findAll({ include: [Product] })
+  Category.findAll()
     .then((dbCategoryData) => res.json(dbCategoryData))
     .catch((err) => {
       res.status(500).json(err);
